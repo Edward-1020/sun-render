@@ -4,7 +4,7 @@
   "description": "react ssr",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./src/index.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Edward-1020/sun-render#readme",
   "dependencies": {
+    "express": "^4.16.4",
     "react": "^16.8.6"
   }
 }
