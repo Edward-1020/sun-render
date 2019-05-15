@@ -1,0 +1,22 @@
+{
+  "name": "sun-render",
+  "version": "1.0.0",
+  "description": "react ssr",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Edward-1020/sun-render.git"
+  },
+  "author": "Edward-1020",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Edward-1020/sun-render/issues"
+  },
+  "homepage": "https://github.com/Edward-1020/sun-render#readme",
+  "dependencies": {
+    "react": "^16.8.6"
+  }
+}
