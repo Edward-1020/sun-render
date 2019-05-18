@@ -90,10 +90,11 @@
 /*!**************************************!*\
   !*** ./src/containers/Home/index.js ***!
   \**************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("var React = __webpack_require__(/*! react */ \"react\");\n\nvar Home = function Home() {\n  return React.createElement(\"div\", null, \"home\");\n};\n\nmodule.exports = {\n  default: Home\n};\n\n//# sourceURL=webpack:///./src/containers/Home/index.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\n\nvar Home = function Home() {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, \"home\");\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Home);\n\n//# sourceURL=webpack:///./src/containers/Home/index.js?");
 
 /***/ }),
 
@@ -101,10 +102,11 @@ eval("var React = __webpack_require__(/*! react */ \"react\");\n\nvar Home = fun
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("var express = __webpack_require__(/*! express */ \"express\");\n\nvar app = express();\n\nvar Home = __webpack_require__(/*! ./containers/Home/index.js */ \"./src/containers/Home/index.js\");\n\napp.get('/', function (req, res) {\n  res.send(\"\\n        <html>\\n            <head>\\n                <title>Hello</title>\\n            </head>\\n            <body>\\n                <p>Hello World</p>\\n            </body>\\n        </html>\\n        \");\n});\nvar server = app.listen(3000);\n\n//# sourceURL=webpack:///./src/index.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! express */ \"express\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _containers_Home_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./containers/Home/index.js */ \"./src/containers/Home/index.js\");\n\n\nvar app = express__WEBPACK_IMPORTED_MODULE_0___default()();\napp.get('/', function (req, res) {\n  res.send(\"\\n        <html>\\n            <head>\\n                <title>Hello</title>\\n            </head>\\n            <body>\\n                <p>Hello World</p>\\n            </body>\\n        </html>\\n        \");\n});\nvar server = app.listen(3000);\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 

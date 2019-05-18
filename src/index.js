@@ -1,6 +1,7 @@
-const express = require('express');
+import express from 'express';
+import Home from './containers/Home/index.js';
+
 const app = express();
-const Home = require('./containers/Home/index.js');
 
 app.get('/', function (req, res) {
     res.send(
