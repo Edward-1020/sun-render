@@ -4,9 +4,9 @@
   "description": "react ssr",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon ./build/bundle.js",
-    "start": "node ./build/bundle.js",
-    "build": "webpack --config webpack.server.js"
+    "dev": "npm-run-all --parallel dev:**",
+    "dev:start": "nodemon ./build/bundle.js",
+    "dev:build": "webpack --config webpack.server.js --watch"
   },
   "repository": {
     "type": "git",
@@ -31,6 +31,7 @@
     "babel-loader": "^8.0.6",
     "babel-preset-react": "^6.24.1",
     "nodemon": "^1.19.0",
+    "npm-run-all": "^4.1.5",
     "webpack": "^4.31.0",
     "webpack-cli": "^3.3.2",
     "webpack-node-externals": "^1.7.2"
