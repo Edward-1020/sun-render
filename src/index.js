@@ -1,7 +1,10 @@
 import express from 'express';
 import Home from './containers/Home/index.js';
+import React from 'react';
+import { renderToString } from 'react-dom/server';
 
 const app = express();
+const content = renderToString(<Home />);
 
 app.get('/', function (req, res) {
     res.send(
@@ -11,7 +14,7 @@ app.get('/', function (req, res) {
                 <title>Hello</title>
             </head>
             <body>
-                <p>Hello World</p>
+                ${content}
             </body>
         </html>
         `
