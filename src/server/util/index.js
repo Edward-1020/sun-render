@@ -2,19 +2,12 @@ import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
 import Routes from '../../Routes';
-import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
-import thunk from 'redux-thunk';
+import getStore from '../../store/index';
 
 export const render = (req, res) => {
-    const reducer = (state = {name: 'dell'}, action) => {
-        return state;
-    }
-    const store = createStore(reducer, applyMiddleware(thunk));
-    
-
-    const content = renderToString((
-        <Provider store={store}>
+ const content = renderToString((
+        <Provider store={getStore()}>
             <StaticRouter location={req.path} context={{}}>
                 {Routes}
             </StaticRouter>
