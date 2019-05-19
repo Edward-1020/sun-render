@@ -1,14 +1,22 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-
 import Routes from '../Routes';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+
+const reducer = (state = {name: 'dell'}, action) => {
+    return state;
+}
+const store = createStore(reducer);
 
 const App = () => {
     return (
-        <BrowserRouter>
-            {Routes}
-        </BrowserRouter> 
+        <Provider store={store}>
+            <BrowserRouter>
+                {Routes}
+            </BrowserRouter> 
+        </Provider>
     )
 }
 
