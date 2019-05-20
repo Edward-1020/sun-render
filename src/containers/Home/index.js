@@ -21,9 +21,12 @@ class Home extends Component {
         )
     }
 
-    componentDidMount () {
-        this.props.getHomeList();
-    }
+    // componentDidMount () {
+    //     this.props.getHomeList();
+    // }
+}
+
+Home.loadData = () => {
 }
 
 const mapStateToProps = (state) => ({
