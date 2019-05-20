@@ -8,9 +8,9 @@ import getStore from '../../store/index';
 
 export const render = (req, res) => {
     const store = getStore();
-    const matchedRoutes = [];
+    let matchedRoutes = [];
 
-    const matchedRoutes = matchRoutes(routes, req.path);
+    matchedRoutes = matchRoutes(routes, req.path);
 
     const content = renderToString((
         <Provider store={store}>
