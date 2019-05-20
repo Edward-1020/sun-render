@@ -1,20 +1,16 @@
 import React from 'react';
 import { renderToString } from 'react-dom/server';
-import { StaticRouter, Route, matchPath } from 'react-router-dom';
+import { StaticRouter, Route } from 'react-router-dom';
+import { matchRoutes } from 'react-router-config';
 import routes from '../../Routes';
 import { Provider } from 'react-redux';
 import getStore from '../../store/index';
 
 export const render = (req, res) => {
     const store = getStore();
-    const matchRoutes = [];
+    const matchedRoutes = [];
 
-    routes.some(route => {
-        const match = matchPath(req.path, route);
-        if (match) {
-            matchRoutes.push(route);
-        }
-    })
+    const matchedRoutes = matchRoutes(routes, req.path);
 
     const content = renderToString((
         <Provider store={store}>
