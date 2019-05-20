@@ -24,5 +24,6 @@ export const getHomeList = () => {
             },
         ];
         dispatch(changeList(list));
+        return Promise.resolve(list);
     }
 }
