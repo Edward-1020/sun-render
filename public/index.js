@@ -623,18 +623,6 @@ eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs
 
 /***/ }),
 
-/***/ "./node_modules/redux-thunk/es/index.js":
-/*!**********************************************!*\
-  !*** ./node_modules/redux-thunk/es/index.js ***!
-  \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nfunction createThunkMiddleware(extraArgument) {\n  return function (_ref) {\n    var dispatch = _ref.dispatch,\n        getState = _ref.getState;\n    return function (next) {\n      return function (action) {\n        if (typeof action === 'function') {\n          return action(dispatch, getState, extraArgument);\n        }\n\n        return next(action);\n      };\n    };\n  };\n}\n\nvar thunk = createThunkMiddleware();\nthunk.withExtraArgument = createThunkMiddleware;\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (thunk);\n\n//# sourceURL=webpack:///./node_modules/redux-thunk/es/index.js?");
-
-/***/ }),
-
 /***/ "./node_modules/redux/es/redux.js":
 /*!****************************************!*\
   !*** ./node_modules/redux/es/redux.js ***!
@@ -861,30 +849,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 /***/ }),
 
-/***/ "./src/containers/Home/store/index.js":
-/*!********************************************!*\
-  !*** ./src/containers/Home/store/index.js ***!
-  \********************************************/
-/*! exports provided: reducer */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _reducer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./reducer */ \"./src/containers/Home/store/reducer.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"reducer\", function() { return _reducer__WEBPACK_IMPORTED_MODULE_0__[\"default\"]; });\n\n\n\n\n//# sourceURL=webpack:///./src/containers/Home/store/index.js?");
-
-/***/ }),
-
-/***/ "./src/containers/Home/store/reducer.js":
-/*!**********************************************!*\
-  !*** ./src/containers/Home/store/reducer.js ***!
-  \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./constants */ \"./src/containers/Home/store/constants.js\");\nfunction _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }\n\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\n\nvar defaultState = {\n  name: 'dell',\n  newsList: []\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\n  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : defaultState;\n  var action = arguments.length > 1 ? arguments[1] : undefined;\n\n  switch (action.type) {\n    case _constants__WEBPACK_IMPORTED_MODULE_0__[\"CHANGE_LIST\"]:\n      return _objectSpread({}, state, {\n        newsList: action.list\n      });\n\n    default:\n      return state;\n  }\n});\n\n//# sourceURL=webpack:///./src/containers/Home/store/reducer.js?");
-
-/***/ }),
-
 /***/ "./src/containers/Login/index.js":
 /*!***************************************!*\
   !*** ./src/containers/Login/index.js ***!
@@ -902,10 +866,9 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
   !*** ./src/store/index.js ***!
   \****************************/
 /*! exports provided: getStore, getClientStore */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"getStore\", function() { return getStore; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"getClientStore\", function() { return getClientStore; });\n/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ \"./node_modules/redux/es/redux.js\");\n/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-thunk */ \"./node_modules/redux-thunk/es/index.js\");\n/* harmony import */ var _containers_Home_store_index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../containers/Home/store/index */ \"./src/containers/Home/store/index.js\");\n\n\n\nvar reducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__[\"combineReducers\"])({\n  home: _containers_Home_store_index__WEBPACK_IMPORTED_MODULE_2__[\"reducer\"]\n});\nvar getStore = function getStore() {\n  return Object(redux__WEBPACK_IMPORTED_MODULE_0__[\"createStore\"])(reducer, Object(redux__WEBPACK_IMPORTED_MODULE_0__[\"applyMiddleware\"])(redux_thunk__WEBPACK_IMPORTED_MODULE_1__[\"default\"]));\n};\nvar getClientStore = function getClientStore() {\n  var defaultState = window.context.state;\n  return Object(redux__WEBPACK_IMPORTED_MODULE_0__[\"createStore\"])(reducer, defaultState, Object(redux__WEBPACK_IMPORTED_MODULE_0__[\"applyMiddleware\"])(redux_thunk__WEBPACK_IMPORTED_MODULE_1__[\"default\"]));\n};\n\n//# sourceURL=webpack:///./src/store/index.js?");
+eval("throw new Error(\"Module build failed (from ./node_modules/babel-loader/lib/index.js):\\nSyntaxError: /Users/edward/git/sun-render/src/store/index.js: Unexpected token, expected \\\",\\\" (17:99)\\n\\n\\u001b[0m \\u001b[90m 15 | \\u001b[39m\\u001b[36mexport\\u001b[39m \\u001b[36mconst\\u001b[39m getClientStore \\u001b[33m=\\u001b[39m () \\u001b[33m=>\\u001b[39m {\\u001b[0m\\n\\u001b[0m \\u001b[90m 16 | \\u001b[39m    \\u001b[36mconst\\u001b[39m defaultState \\u001b[33m=\\u001b[39m window\\u001b[33m.\\u001b[39mcontext\\u001b[33m.\\u001b[39mstate\\u001b[33m;\\u001b[39m\\u001b[0m\\n\\u001b[0m\\u001b[31m\\u001b[1m>\\u001b[22m\\u001b[39m\\u001b[90m 17 | \\u001b[39m    \\u001b[36mreturn\\u001b[39m createStore(reducer\\u001b[33m,\\u001b[39m defaultState\\u001b[33m,\\u001b[39m applyMiddleware(thunk\\u001b[33m.\\u001b[39mwithExtraArgument(clientAxios))\\u001b[33m;\\u001b[39m\\u001b[0m\\n\\u001b[0m \\u001b[90m    | \\u001b[39m                                                                                                   \\u001b[31m\\u001b[1m^\\u001b[22m\\u001b[39m\\u001b[0m\\n\\u001b[0m \\u001b[90m 18 | \\u001b[39m}\\u001b[0m\\n    at Object.raise (/Users/edward/git/sun-render/node_modules/@babel/parser/lib/index.js:6322:17)\\n    at Object.unexpected (/Users/edward/git/sun-render/node_modules/@babel/parser/lib/index.js:7638:16)\\n    at Object.expect (/Users/edward/git/sun-render/node_modules/@babel/parser/lib/index.js:7624:28)\\n    at Object.parseCallExpressionArguments (/Users/edward/git/sun-render/node_modules/@babel/parser/lib/index.js:8577:14)\\n    at Object.parseSubscript (/Users/edward/git/sun-render/node_modules/@babel/parser/lib/index.js:8487:29)\\n    at Object.parseSubscripts (/Users/edward/git/sun-render/node_modules/@babel/parser/lib/index.js:8406:19)\\n    at Object.parseExprSubscripts (/Users/edward/git/sun-render/node_modules/@babel/parser/lib/index.js:8395:17)\\n    at Object.parseMaybeUnary (/Users/edward/git/sun-render/node_modules/@babel/parser/lib/index.js:8365:21)\\n    at Object.parseExprOps (/Users/edward/git/sun-render/node_modules/@babel/parser/lib/index.js:8252:23)\\n    at Object.parseMaybeConditional (/Users/edward/git/sun-render/node_modules/@babel/parser/lib/index.js:8225:23)\\n    at Object.parseMaybeAssign (/Users/edward/git/sun-render/node_modules/@babel/parser/lib/index.js:8172:21)\\n    at Object.parseExpression (/Users/edward/git/sun-render/node_modules/@babel/parser/lib/index.js:8120:23)\\n    at Object.parseReturnStatement (/Users/edward/git/sun-render/node_modules/@babel/parser/lib/index.js:10132:28)\\n    at Object.parseStatementContent (/Users/edward/git/sun-render/node_modules/@babel/parser/lib/index.js:9811:21)\\n    at Object.parseStatement (/Users/edward/git/sun-render/node_modules/@babel/parser/lib/index.js:9763:17)\\n    at Object.parseBlockOrModuleBlockBody (/Users/edward/git/sun-render/node_modules/@babel/parser/lib/index.js:10340:25)\\n    at Object.parseBlockBody (/Users/edward/git/sun-render/node_modules/@babel/parser/lib/index.js:10327:10)\\n    at Object.parseBlock (/Users/edward/git/sun-render/node_modules/@babel/parser/lib/index.js:10311:10)\\n    at Object.parseFunctionBody (/Users/edward/git/sun-render/node_modules/@babel/parser/lib/index.js:9382:24)\\n    at Object.parseArrowExpression (/Users/edward/git/sun-render/node_modules/@babel/parser/lib/index.js:9323:10)\\n    at Object.parseParenAndDistinguishExpression (/Users/edward/git/sun-render/node_modules/@babel/parser/lib/index.js:8960:12)\\n    at Object.parseExprAtom (/Users/edward/git/sun-render/node_modules/@babel/parser/lib/index.js:8731:21)\\n    at Object.parseExprAtom (/Users/edward/git/sun-render/node_modules/@babel/parser/lib/index.js:3596:20)\\n    at Object.parseExprSubscripts (/Users/edward/git/sun-render/node_modules/@babel/parser/lib/index.js:8385:23)\\n    at Object.parseMaybeUnary (/Users/edward/git/sun-render/node_modules/@babel/parser/lib/index.js:8365:21)\\n    at Object.parseExprOps (/Users/edward/git/sun-render/node_modules/@babel/parser/lib/index.js:8252:23)\\n    at Object.parseMaybeConditional (/Users/edward/git/sun-render/node_modules/@babel/parser/lib/index.js:8225:23)\\n    at Object.parseMaybeAssign (/Users/edward/git/sun-render/node_modules/@babel/parser/lib/index.js:8172:21)\\n    at Object.parseVar (/Users/edward/git/sun-render/node_modules/@babel/parser/lib/index.js:10415:26)\\n    at Object.parseVarStatement (/Users/edward/git/sun-render/node_modules/@babel/parser/lib/index.js:10234:10)\");\n\n//# sourceURL=webpack:///./src/store/index.js?");
 
 /***/ })
 
