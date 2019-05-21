@@ -23,13 +23,13 @@ class Home extends Component {
 
     componentDidMount () {
         if (!this.props.list.length) {
-            this.props.getHomeList();
+            this.props.getHomeList(false);
         }
     }
 }
 
 Home.loadData = (store) => {
-    return store.dispatch(getHomeList());
+    return store.dispatch(getHomeList(true));
 }
 
 const mapStateToProps = (state) => ({

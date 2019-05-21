@@ -7,7 +7,13 @@ const changeList = (list) => {
     }
 }
 
-export const getHomeList = () => {
+export const getHomeList = (server) => {
+    let url = ''
+    if (server) {
+        url = 'a';
+    } else {
+        url = 'b';
+    }
     return (dispatch) => {
         const list = [
             {
