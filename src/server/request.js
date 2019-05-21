@@ -4,4 +4,4 @@ const instance = axios.create({
     baseURL: '/absolute'
 })
 
-export instance;
+export {instance};
