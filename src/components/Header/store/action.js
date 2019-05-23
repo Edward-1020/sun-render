@@ -7,6 +7,15 @@ const changeLogin = (value) => {
     }
 }
 
+export const login = () => {
+    return (dispatch, getState, axiosInstance) => {
+        return axiosInstance.get('/a')
+            .then((res) => {
+                dispatch(changeLogin(res.data.data.login))
+            })
+    }
+} 
+
 export const getHeaderInfo = () => {
     return (dispatch, getState, axiosInstance) => {
         return axiosInstance.get('/a')
