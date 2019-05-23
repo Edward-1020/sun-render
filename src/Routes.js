@@ -7,6 +7,7 @@ import Login from './containers/Login';
 export default [{
     path: '/',
     component: App,
+    loadData: App.loadData,
     routes: [
         {
             path: '/',
