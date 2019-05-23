@@ -15,7 +15,7 @@ app.use('/api', proxy('http://localhost:3000', {
 }));
 
 app.get('*', function (req, res) {
-    const store = getStore();
+    const store = getStore(req);
     let matchedRoutes = matchRoutes(routes, req.path);
     let promises = [];
     matchedRoutes.forEach(item => {

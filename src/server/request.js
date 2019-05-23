@@ -1,7 +1,10 @@
 import axios from 'axios';
 
-const instance = axios.create({
-    baseURL: '/absolute'
+const createInstance = (req) => axios.create({
+    baseURL: '/absolute',
+    headers: {
+        cookie: req.get('cookie')
+    }
 })
 
-export {instance};
+export default createInstance;
