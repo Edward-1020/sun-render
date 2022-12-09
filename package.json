@@ -21,7 +21,7 @@
   "homepage": "https://github.com/Edward-1020/sun-render#readme",
   "dependencies": {
     "axios": "^0.18.0",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "express-http-proxy": "^1.5.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
